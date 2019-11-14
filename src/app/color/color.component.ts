@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, SimpleChange } from '@angular/core';
+import { Component, Input, SimpleChange } from '@angular/core';
 
 @Component({
-  selector: 'app-dot',
-  templateUrl: './dot.component.html',
-  styleUrls: ['./dot.component.css']
+  selector: 'app-color',
+  templateUrl: './color.component.html',
+  styleUrls: ['./color.component.css']
 })
-export class DotComponent implements OnInit {
+export class ColorComponent {
 
   @Input('color') color: any;
   @Input('gradient') gradient: any;
@@ -21,9 +21,6 @@ export class DotComponent implements OnInit {
 
   private updateGradient(){
     this.staticGradient = `linear-gradient(45deg, ${this.gradient.color} 0%, ${this.gradient.color2} 100%)`;
-  }
-
-  ngOnInit() {
   }
 
   ngOnChanges(changes: SimpleChange) {

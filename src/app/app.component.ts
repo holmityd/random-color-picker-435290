@@ -12,8 +12,11 @@ export class AppComponent  {
 
   constructor(){
     setInterval(()=>{
-      this.myColor = {color: this.getRandomColor()};
-      this.myGradient = { color: this.getRandomColor(), color2: this.getRandomColor() };
+      this.myColor.color = this.getRandomColor();
+      this.myColor = Object.assign({}, this.myColor);
+      this.myGradient.color = this.getRandomColor();
+      this.myGradient.color2 = this.getRandomColor();
+      this.myGradient = Object.assign({}, this.myGradient);
     },2000);
   }
 

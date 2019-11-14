@@ -1,0 +1,7 @@
+<p *ngIf="staticBackground" [style.background]="staticBackground | safe: 'style'">
+{{staticBackground}}
+</p>
+<p *ngIf="staticGradient" [style.background]="staticGradient | safe: 'style'">
+  <span>{{gradient.color}}</span>
+  <span>{{gradient.color2}}</span>
+</p>

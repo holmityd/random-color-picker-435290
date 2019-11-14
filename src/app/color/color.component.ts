@@ -20,7 +20,7 @@ export class ColorComponent {
   }
 
   private updateGradient(){
-    this.staticGradient = `linear-gradient(45deg, ${this.gradient.color} 0%, ${this.gradient.color2} 100%)`;
+    this.staticGradient = `linear-gradient(0deg, ${this.gradient.color} 0%, ${this.gradient.color2} 100%)`;
   }
 
   ngOnChanges(changes: SimpleChange) {
